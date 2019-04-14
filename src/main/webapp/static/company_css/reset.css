@@ -1,0 +1,39 @@
+  /* 清除默认 */
+
+  body {
+    font-family: "Microsoft yahei"
+}
+
+body,
+dl,
+dd,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+ol,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+img {
+    border: none;
+    vertical-align: middle;
+}
+
+a, a:hover {
+    text-decoration: none;
+}
+
+button {
+    outline: none;
+}

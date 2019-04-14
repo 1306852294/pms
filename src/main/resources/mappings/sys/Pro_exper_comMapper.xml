@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.peace.pms.dao.sys.Pro_Exper_ComMapper" >
+  <resultMap id="BaseResultMap" type="com.peace.pms.entity.sys.Pro_exper_com" >
+    <result column="Pid" property="pid" jdbcType="INTEGER" />
+    <result column="Eid" property="eid" jdbcType="INTEGER" />
+    <result column="Cid" property="cid" jdbcType="INTEGER" />
+    <result column="Suggestion" property="suggestion" jdbcType="CHAR" />
+    <result column="Pdeclare" property="pdeclare" jdbcType="CHAR" />
+    <result column="Score" property="score" jdbcType="DOUBLE" />
+  </resultMap>
+
+  <select id="selectPRC"  resultMap="BaseResultMap" parameterType="com.peace.pms.entity.sys.Pro_exper_com" >
+    SELECT *
+    from pro_exper_com
+    where pid=#{pid,jdbcType=INTEGER} and cid=#{cid,jdbcType=INTEGER} and eid=#{eid,jdbcType=INTEGER}
+
+  </select>
+
+  <select id="selectPECByPid" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+    select *
+    from pro_exper_com
+    where pid=#{pid,jdbcType=INTEGER}
+  </select>
+
+  <delete id="deleteByPid" parameterType="java.lang.Integer" >
+    delete from pro_exper_com
+    where pid = #{pid,jdbcType=INTEGER}
+  </delete>
+
+  <insert id="insert" parameterType="com.peace.pms.entity.sys.Pro_exper_com" >
+    insert into pro_exper_com (Pid, Eid, Cid,
+      Suggestion, Pdeclare, Score
+      )
+    values (#{pid,jdbcType=INTEGER}, #{eid,jdbcType=INTEGER}, #{cid,jdbcType=INTEGER},
+      #{suggestion,jdbcType=CHAR}, #{pdeclare,jdbcType=CHAR}, #{score,jdbcType=DOUBLE}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.peace.pms.entity.sys.Pro_exper_com" >
+    insert into pro_exper_com
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="pid != null" >
+        Pid,
+      </if>
+      <if test="eid != null" >
+        Eid,
+      </if>
+      <if test="cid != null" >
+        Cid,
+      </if>
+      <if test="suggestion != null" >
+        Suggestion,
+      </if>
+      <if test="pdeclare != null" >
+        Pdeclare,
+      </if>
+      <if test="score != null" >
+        Score,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="pid != null" >
+        #{pid,jdbcType=INTEGER},
+      </if>
+      <if test="eid != null" >
+        #{eid,jdbcType=INTEGER},
+      </if>
+      <if test="cid != null" >
+        #{cid,jdbcType=INTEGER},
+      </if>
+      <if test="suggestion != null" >
+        #{suggestion,jdbcType=CHAR},
+      </if>
+      <if test="pdeclare != null" >
+        #{pdeclare,jdbcType=CHAR},
+      </if>
+      <if test="score != null" >
+        #{score,jdbcType=DOUBLE},
+      </if>
+    </trim>
+  </insert>
+
+
+
+
+
+</mapper>

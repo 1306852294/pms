@@ -1,0 +1,145 @@
+.containe {
+  width: 100%;
+  padding: 3%;
+  display: flex;
+}
+
+.containe>.container-left {
+  flex: 1;
+  padding-right: 15px;
+}
+
+.containe>.container-left>a {
+  display: block;
+  margin-bottom: 20px;
+  width: 200px;
+  height: 55px;
+  text-align: center;
+  line-height: 55px;
+  border-radius: 5px;
+  color: #23527c;
+  background-color: #1f94f8;
+}
+
+.containe>.container-left>.title,
+.submitManage>.title {
+  width: 100%;
+  height: 4rem;
+  margin-left: 0;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  display: flex;
+  font-size: 1.5rem;
+  align-items: center;
+}
+
+.containe>.container-left>.title>.icon,
+.submitManage>.title>.icon {
+  background-color: #1f94f8;
+  display: inline-block;
+  width: 6px;
+  height: 25px;
+}
+
+.containe>.container-left>.title>.title-text,
+.submitManage>.title>.title-text {
+  padding-left: 4px;
+}
+
+.containe>.container-left>.type {
+  position: relative;
+  width: 100%;
+  height: 4rem;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #acb9db;
+}
+
+.containe>.container-left>.type span.glyphicon-remove {
+  position: absolute;
+  right: 15px;
+  top: 20px;
+  cursor: pointer;
+}
+
+.containe>.container-left>button {
+  margin: 15px 30px;
+  width: 135px;
+  height: 35px;
+}
+
+.containe>.container-right {
+  flex: 3;
+  border-left: 1px solid #acb9db;
+  padding-left: 15px;
+  height: 100%;
+}
+
+.containe>.container-right>.submit {
+  position: relative;
+  padding: 28px;
+  width: 100%;
+  height: 800px;
+  background-color: #fff;
+}
+
+.containe>.container-right>.submit>h3 {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  border-bottom: 1px solid #666;
+}
+
+.containe>.container-right>.submit>.submitMain {
+  margin: 25px auto;
+  width: 90%;
+  height: 620px;
+  border: 1px solid #666;
+}
+
+.containe>.container-right>.submit>.submitBot {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.containe>.container-right>.submit>.submitBot>a {
+  display: block;
+  margin: 0 auto;
+  width: 130px;
+  height: 40px;
+  line-height: 40px;
+  color: #23527c;
+  background-color: #1f94f8;
+  border-radius: 5px;
+}
+
+.container-right-center-two {
+  position: relative;
+  height: 750px;
+  border: 1px solid dimgray;
+  padding: 10px 10px 10px 10px;
+  background-color: white;
+}
+
+.PoT-content {
+  display: block;
+  padding: 0 10px;
+  line-height: 40px;
+  border-bottom: 1px solid rgb(237, 237, 237);
+  font-size: 18px;
+}
+
+.PoT-content .status {
+  float: right;
+  font-size: 12px;
+}
+
+.PoT-content .pass {
+  color: blue;
+}
+
+.PoT-content .fail {
+  color: red;
+}

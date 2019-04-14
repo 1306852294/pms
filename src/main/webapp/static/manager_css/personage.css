@@ -1,0 +1,177 @@
+/*个人中心*/
+.main {
+  padding: 30px 0;
+  background: url(../images/bg.png) center center fixed;
+  background-size: cover;
+}
+
+.main .main_info {
+  padding: 15px 15px 0 15px;
+  width: 75%;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  background-color: rgb(223, 241, 255);
+}
+
+.main .main_info .main_left {
+  float: left;
+  width: 25%;
+}
+
+.main .main_info .main_right {
+  float: left;
+  margin-bottom: 14px;
+  width: 75%;
+  border: 1px solid #eee;
+}
+
+.main .main_info .main_right .details {
+  position: relative;
+  padding: 10px;
+  width: 96%;
+  margin: 14px 0 14px 17px;
+}
+
+.details {
+  background-color: white;
+}
+
+.name {
+  font-size: 20px;
+  color: rgb(54, 154, 254);
+  display: block;
+  margin-top: 20px;
+}
+
+.main_left {
+  text-align: center;
+  border-style: none none dashed none;
+  border-width: 1px;
+}
+
+
+/*信息管理*/
+
+.my-form {
+  background-color: white;
+  position: relative;
+  padding: 10px;
+  width: 692px;
+  height: 600px;
+}
+
+.title {
+  border-style: none none solid none;
+  border-color: rgb(221, 221, 221);
+  border-bottom-width: 1px;
+  padding-bottom: 5px;
+}
+
+.Chinese-title {
+  color: #3366cc;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.English-title {
+  padding: 8px;
+  font-size: 16px;
+  color: #bfbfbf;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.table-up {
+  margin-top: 10px;
+}
+
+.table-down {
+  margin-top: 10px;
+}
+
+.table-up .table-up tr td {
+  border: 1px solid rgb(221, 221, 221);
+}
+
+.table-up tr td {
+  border: 1px solid rgb(221, 221, 221);
+}
+
+.table-down tr td {
+  border: 1px solid rgb(221, 221, 221);
+}
+
+.table-otd {
+  width: 165px;
+  text-align: right;
+}
+
+.table-ttd {
+  width: 180px;
+}
+
+.talbe-time {
+  text-align: center;
+}
+
+.form-text {
+  height: 20px;
+}
+
+.cpclass {
+  width: 32%;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+.personal-button {
+  text-align: center
+}
+
+button[class|="personal-button"] {
+  color: white;
+  border: 0;
+  padding: 5px 15px;
+}
+
+.personal-button-left {
+  background-color: rgb(58, 149, 245);
+}
+
+.personal-button-right {
+  margin-left: 50px;
+  background-color: rgb(255, 102, 51);
+}
+
+/*密码修改*/
+.main .main_info .main_right .details #changeBox {
+  height: 500px;
+}
+
+.main .main_info .main_right .details .change {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -110px 0 0 -250px;
+  width: 500px;
+  height: inherit;
+}
+
+.main .main_info .main_right .details .change .form-horizontal .btn {
+  position: absolute;
+  left: 50%;
+  top: 55%;
+  width: 90px;
+  margin-left: -45px;
+}
+.container-right .submit .submitBot a {
+  display: block;
+  margin: 0 auto;
+  width: 130px;
+  height: 40px;
+  line-height: 40px;
+  color: #23527c;
+  background-color: #1f94f8;
+  border-radius: 5px;
+  text-align: center
+}

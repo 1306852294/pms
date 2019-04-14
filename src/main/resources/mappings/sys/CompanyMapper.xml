@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.peace.pms.dao.sys.CompanyMapper" >
+	<resultMap id="BaseResultMap" type="com.peace.pms.entity.sys.Company" >
+		<id column="Cid" property="cid" jdbcType="INTEGER" />
+		<result column="Registernum" property="registernum" jdbcType="INTEGER" />
+		<result column="Password" property="password" jdbcType="CHAR" />
+		<result column="Cname" property="cname" jdbcType="CHAR" />
+		<result column="Cphone" property="cphone" jdbcType="CHAR" />
+		<result column="Cname_manager" property="cnameManager" jdbcType="CHAR" />
+		<result column="Csex" property="csex" jdbcType="CHAR" />
+		<result column="Ccard" property="ccard" jdbcType="CHAR" />
+		<result column="Model" property="model" jdbcType="CHAR" />
+		<result column="Regis_time" property="regisTime" jdbcType="CHAR" />
+		<result column="Prange" property="prange" jdbcType="CHAR" />
+		<result column="Ctype" property="ctype" jdbcType="CHAR" />
+		<result column="Email" property="email" jdbcType="CHAR" />
+	</resultMap>
+
+	<sql id="Base_Column_List" >
+    Cid, Registernum, Password, Cname, Cphone, Cname_manager, Csex, Ccard, Model, Regis_time,
+    Prange, Ctype, Email
+  </sql>
+
+
+	<select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from company
+		where Cid = #{cid,jdbcType=INTEGER}
+	</select>
+
+
+	<select id="selectProBycid" resultType="com.peace.pms.entity.sys.Project" >
+	SELECT
+			pid,pname,cid,pcross,rank,type,mode,builde,start,
+			pre_end preEnd,end,state,
+			relese_power relesePower,
+			rule_power rulePower
+	from project
+	where cid =#{cid}
+	</select>
+
+
+
+	<!-- 企业注册 -->
+	<insert id="insert" parameterType="com.peace.pms.entity.sys.Company"  useGeneratedKeys="true" keyProperty="cid">
+		insert into company(
+			Cid,Registernum,Password,Cname,
+			Cphone,Cname_manager,Csex,Ccard,
+			Model,Regis_time,Prange,Ctype,Email
+		)values(
+			#{cid},#{registernum},#{password},#{cname},
+			#{cphone},#{cnameManager},#{csex},#{ccard},
+			#{model},#{regisTime},#{prange},#{ctype},#{email}
+		)
+	</insert>
+	
+	<!-- 通过企业ID查找信息 -->
+	<select id="findCompanyByCid" resultType="com.peace.pms.entity.sys.Company">
+		select
+			cid,registernum,password,cname,cphone,
+			cname_manager cnameManager,
+			csex,ccard,model,
+			regis_time regisTime,
+			prange,ctype,email
+		from
+			company
+		where
+			cid=#{cid}
+	</select>
+	
+	<!-- 通过邮箱查找企业 -->
+	<select id="findCompanyByEmail" resultType="com.peace.pms.entity.sys.Company">
+		select
+			cid,registernum,password,cname,cphone,
+			cname_manager cnameManager,
+			csex,ccard,model,
+			regis_time regisTime,
+			prange,ctype,email
+		from
+			company
+		where
+			Email=#{email}
+	</select>
+	
+	<!-- 查找所有的项目 -->
+	<select id="findAllProject" resultType="com.peace.pms.entity.sys.Project">
+		select
+			pid,pname,cid,pcross,rank,type,mode,builde,start,
+			pre_end preEnd,end,state,
+			relese_power relesePower,
+			rule_power rulePower
+		from
+			project
+		where
+			state='评审管理'
+	</select>
+	
+	<!-- 通过Pid查询项目 -->
+	<select id="findProjectByPid" resultType="com.peace.pms.entity.sys.Project">
+		select
+			pid,pname,cid,pcross,rank,type,mode,builde,start,
+			pre_end preEnd,end,state,
+			relese_power relesePower,
+			rule_power rulePower
+		from
+			project
+		where
+			Pid=#{pid}
+	</select>
+	
+	<!-- 插入信息到项目-企业表 -->
+	<insert id="upload" parameterType="com.peace.pms.entity.sys.Pro_exper_com">
+		insert into pro_exper_com(
+			pid,cid,pdeclare
+		)values(
+			#{pid},#{cid},#{pdeclare}
+		)
+	</insert>
+	
+	<!-- 通过企业ID查找所有的项目ID -->
+	<select id="findAllPidByCid" resultType="java.lang.Integer">
+		select
+			Pid
+		from
+			pro_exper_com
+		where
+			Cid=#{cid}
+	</select>
+	
+	<!-- 修改密码 -->
+	<update id="changePassword" parameterType="com.peace.pms.entity.sys.Company">
+		update
+			company
+		set
+			Password=#{password}
+		where
+			Cid=#{cid}
+	</update>
+	
+	<!-- 修改基本信息 -->
+	<update id="changeInformation" parameterType="com.peace.pms.entity.sys.Company">
+		update
+			company
+		set
+			<if test="cname!=null">
+				cname=#{cname},
+			</if>
+			<if test="cphone!=null">
+				cphone=#{cphone},
+			</if>
+			<if test="model!=null">
+				model=#{model},
+			</if>
+			<if test="prange!=null">
+				prange=#{prange},
+			</if>
+			<if test="ctype!=null">
+				ctype=#{ctype},
+			</if>
+			<if test="regisTime!=null">
+				regis_time=#{regisTime}
+			</if>
+		where
+			Cid=#{cid}
+	</update>
+
+	
+</mapper>
+
+
+
+
+

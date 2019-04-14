@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.peace.pms.dao.sys.ProjectMapper" >
+  <resultMap id="BaseResultMap" type="com.peace.pms.entity.sys.Project" >
+    <id column="Pid" property="pid" jdbcType="INTEGER" />
+    <result column="Pname" property="pname" jdbcType="CHAR" />
+    <result column="Cid" property="cid" jdbcType="INTEGER" />
+    <result column="Pcross" property="pcross" jdbcType="CHAR" />
+    <result column="rank" property="rank" jdbcType="CHAR" />
+    <result column="Type" property="type" jdbcType="CHAR" />
+    <result column="Mode" property="mode" jdbcType="CHAR" />
+    <result column="Builde" property="builde" jdbcType="CHAR" />
+    <result column="Start" property="start" jdbcType="CHAR" />
+    <result column="Pre_end" property="preEnd" jdbcType="CHAR" />
+    <result column="End" property="end" jdbcType="CHAR" />
+    <result column="state" property="state" jdbcType="CHAR" />
+    <result column="Relese_power" property="relesePower" jdbcType="CHAR" />
+    <result column="Rule_power" property="rulePower" jdbcType="CHAR" />
+    <result column="content" property="content" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    Pid, Pname, Cid, Pcross, rank, Type, Mode, Builde, Start, Pre_end, End, state, Relese_power,
+    Rule_power, content
+  </sql>
+
+  <select id="findAll" resultMap="BaseResultMap" parameterType="java.util.List">
+    select
+    <include refid="Base_Column_List" />
+    from project
+    where Pid in
+    <foreach collection="list" index="index" item="item" open="("
+             separator="," close=")">
+      #{item}
+    </foreach>
+  </select>
+
+
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select
+    <include refid="Base_Column_List" />
+    from project
+    where Pid = #{pid,jdbcType=INTEGER}
+  </select>
+
+
+  <select id="selectJudgeProByMid" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+    select
+    p.Pid, Pname, Cid, Pcross, rank, Type, Mode, Builde, Start, Pre_end, End, state, Relese_power,
+    Rule_power, content
+    from manager m, project p ,pro_man pm
+    where m.Mid=pm.Mid and pm.Pid=p.Pid and m.Mid=#{id,jdbcType=INTEGER}  and p.state='评审管理';
+  </select>
+
+
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from project
+    where Pid = #{pid,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.peace.pms.entity.sys.Project"  keyProperty="pid" useGeneratedKeys="true">
+    insert into project (Pid, Pname, Cid, 
+      Pcross, rank, Type, Mode, 
+      Builde, Start, Pre_end, End, 
+      state, Relese_power, Rule_power, 
+      content)
+    values (#{pid,jdbcType=INTEGER}, #{pname,jdbcType=CHAR}, #{cid,jdbcType=INTEGER}, 
+      #{pcross,jdbcType=CHAR}, #{rank,jdbcType=CHAR}, #{type,jdbcType=CHAR}, #{mode,jdbcType=CHAR}, 
+      #{builde,jdbcType=CHAR}, #{start,jdbcType=CHAR}, #{preEnd,jdbcType=CHAR}, #{end,jdbcType=CHAR}, 
+      #{state,jdbcType=CHAR}, #{relesePower,jdbcType=CHAR}, #{rulePower,jdbcType=CHAR}, 
+      #{content,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.peace.pms.entity.sys.Project" keyProperty="pid" useGeneratedKeys="true" >
+    insert into project
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="pid != null" >
+        Pid,
+      </if>
+      <if test="pname != null" >
+        Pname,
+      </if>
+      <if test="cid != null" >
+        Cid,
+      </if>
+      <if test="pcross != null" >
+        Pcross,
+      </if>
+      <if test="rank != null" >
+        rank,
+      </if>
+      <if test="type != null" >
+        Type,
+      </if>
+      <if test="mode != null" >
+        Mode,
+      </if>
+      <if test="builde != null" >
+        Builde,
+      </if>
+      <if test="start != null" >
+        Start,
+      </if>
+      <if test="preEnd != null" >
+        Pre_end,
+      </if>
+      <if test="end != null" >
+        End,
+      </if>
+      <if test="state != null" >
+        state,
+      </if>
+      <if test="relesePower != null" >
+        Relese_power,
+      </if>
+      <if test="rulePower != null" >
+        Rule_power,
+      </if>
+      <if test="content != null" >
+        content,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="pid != null" >
+        #{pid,jdbcType=INTEGER},
+      </if>
+      <if test="pname != null" >
+        #{pname,jdbcType=CHAR},
+      </if>
+      <if test="cid != null" >
+        #{cid,jdbcType=INTEGER},
+      </if>
+      <if test="pcross != null" >
+        #{pcross,jdbcType=CHAR},
+      </if>
+      <if test="rank != null" >
+        #{rank,jdbcType=CHAR},
+      </if>
+      <if test="type != null" >
+        #{type,jdbcType=CHAR},
+      </if>
+      <if test="mode != null" >
+        #{mode,jdbcType=CHAR},
+      </if>
+      <if test="builde != null" >
+        #{builde,jdbcType=CHAR},
+      </if>
+      <if test="start != null" >
+        #{start,jdbcType=CHAR},
+      </if>
+      <if test="preEnd != null" >
+        #{preEnd,jdbcType=CHAR},
+      </if>
+      <if test="end != null" >
+        #{end,jdbcType=CHAR},
+      </if>
+      <if test="state != null" >
+        #{state,jdbcType=CHAR},
+      </if>
+      <if test="relesePower != null" >
+        #{relesePower,jdbcType=CHAR},
+      </if>
+      <if test="rulePower != null" >
+        #{rulePower,jdbcType=CHAR},
+      </if>
+      <if test="content != null" >
+        #{content,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.peace.pms.entity.sys.Project" >
+    update project
+    <set >
+      <if test="pname != null" >
+        Pname = #{pname,jdbcType=CHAR},
+      </if>
+      <if test="cid != null" >
+        Cid = #{cid,jdbcType=INTEGER},
+      </if>
+      <if test="pcross != null" >
+        Pcross = #{pcross,jdbcType=CHAR},
+      </if>
+      <if test="rank != null" >
+        rank = #{rank,jdbcType=CHAR},
+      </if>
+      <if test="type != null" >
+        Type = #{type,jdbcType=CHAR},
+      </if>
+      <if test="mode != null" >
+        Mode = #{mode,jdbcType=CHAR},
+      </if>
+      <if test="builde != null" >
+        Builde = #{builde,jdbcType=CHAR},
+      </if>
+      <if test="start != null" >
+        Start = #{start,jdbcType=CHAR},
+      </if>
+      <if test="preEnd != null" >
+        Pre_end = #{preEnd,jdbcType=CHAR},
+      </if>
+      <if test="end != null" >
+        End = #{end,jdbcType=CHAR},
+      </if>
+      <if test="state != null" >
+        state = #{state,jdbcType=CHAR},
+      </if>
+      <if test="relesePower != null" >
+        Relese_power = #{relesePower,jdbcType=CHAR},
+      </if>
+      <if test="rulePower != null" >
+        Rule_power = #{rulePower,jdbcType=CHAR},
+      </if>
+      <if test="content != null" >
+        content = #{content,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where Pid = #{pid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.peace.pms.entity.sys.Project" >
+    update project
+    set Pname = #{pname,jdbcType=CHAR},
+      Cid = #{cid,jdbcType=INTEGER},
+      Pcross = #{pcross,jdbcType=CHAR},
+      rank = #{rank,jdbcType=CHAR},
+      Type = #{type,jdbcType=CHAR},
+      Mode = #{mode,jdbcType=CHAR},
+      Builde = #{builde,jdbcType=CHAR},
+      Start = #{start,jdbcType=CHAR},
+      Pre_end = #{preEnd,jdbcType=CHAR},
+      End = #{end,jdbcType=CHAR},
+      state = #{state,jdbcType=CHAR},
+      Relese_power = #{relesePower,jdbcType=CHAR},
+      Rule_power = #{rulePower,jdbcType=CHAR},
+      content = #{content,jdbcType=VARCHAR}
+    where Pid = #{pid,jdbcType=INTEGER}
+  </update>
+</mapper>

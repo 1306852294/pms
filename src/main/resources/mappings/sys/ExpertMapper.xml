@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.peace.pms.dao.sys.ExpertMapper" >
+  <resultMap id="BaseResultMap" type="com.peace.pms.entity.sys.Expert" >
+    <id column="Eid" property="eid" jdbcType="INTEGER" />
+    <result column="Ename" property="ename" jdbcType="CHAR" />
+    <result column="Password" property="password" jdbcType="CHAR" />
+    <result column="Esex" property="esex" jdbcType="CHAR" />
+    <result column="Ecard" property="ecard" jdbcType="CHAR" />
+    <result column="Enumber" property="enumber" jdbcType="CHAR" />
+    <result column="Ephone" property="ephone" jdbcType="CHAR" />
+    <result column="Eprovince" property="eprovince" jdbcType="CHAR" />
+    <result column="Ecity" property="ecity" jdbcType="CHAR" />
+    <result column="Ecounty" property="ecounty" jdbcType="CHAR" />
+    <result column="Eduction" property="eduction" jdbcType="CHAR" />
+    <result column="Email" property="email" jdbcType="CHAR" />
+    <result column="Company" property="company" jdbcType="CHAR" />
+    <result column="Edirection" property="edirection" jdbcType="CHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    Eid, Ename, Password, Esex, Ecard, Enumber, Ephone, Eprovince, Ecity, Ecounty, Eduction, 
+    Email, Company, Edirection
+  </sql>
+
+
+
+  <select id="selectByEmail" parameterType="String" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List"></include>
+    from expert
+    where Email=#{email,jdbcType=CHAR}
+  </select>
+
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from expert
+    where Eid = #{eid,jdbcType=INTEGER}
+  </select>
+
+  <select id="selectjudge" resultMap="BaseResultMap"  parameterType="com.peace.pms.entity.sys.Expert" >
+    select
+    <include refid="Base_Column_List"/>
+    from expert e
+    <where>
+      <if test="eprovince != null ">e.Eprovince=#{eprovince}</if>
+      <if test="ecity != null " >and e.Ecity=#{ecity}</if>
+      <if test="eduction != null " >and e.Eduction=#{eduction}</if>
+      <if test="edirection != null " >and e.Edirection=#{edirection}</if>
+    </where>
+  </select>
+
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from expert
+    where Eid = #{eid,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.peace.pms.entity.sys.Expert" >
+    insert into expert (Eid, Ename, Password, 
+      Esex, Ecard, Enumber, Ephone, 
+      Eprovince, Ecity, Ecounty, Eduction, 
+      Email, Company, Edirection)
+    values (#{eid,jdbcType=INTEGER}, #{ename,jdbcType=CHAR}, #{password,jdbcType=CHAR}, 
+      #{esex,jdbcType=CHAR}, #{ecard,jdbcType=CHAR}, #{enumber,jdbcType=CHAR}, #{ephone,jdbcType=CHAR}, 
+      #{eprovince,jdbcType=CHAR}, #{ecity,jdbcType=CHAR}, #{ecounty,jdbcType=CHAR}, #{eduction,jdbcType=CHAR}, 
+      #{email,jdbcType=CHAR}, #{company,jdbcType=CHAR}, #{edirection,jdbcType=CHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.peace.pms.entity.sys.Expert" >
+    insert into expert
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="eid != null" >
+        Eid,
+      </if>
+      <if test="ename != null" >
+        Ename,
+      </if>
+      <if test="password != null" >
+        Password,
+      </if>
+      <if test="esex != null" >
+        Esex,
+      </if>
+      <if test="ecard != null" >
+        Ecard,
+      </if>
+      <if test="enumber != null" >
+        Enumber,
+      </if>
+      <if test="ephone != null" >
+        Ephone,
+      </if>
+      <if test="eprovince != null" >
+        Eprovince,
+      </if>
+      <if test="ecity != null" >
+        Ecity,
+      </if>
+      <if test="ecounty != null" >
+        Ecounty,
+      </if>
+      <if test="eduction != null" >
+        Eduction,
+      </if>
+      <if test="email != null" >
+        Email,
+      </if>
+      <if test="company != null" >
+        Company,
+      </if>
+      <if test="edirection != null" >
+        Edirection,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="eid != null" >
+        #{eid,jdbcType=INTEGER},
+      </if>
+      <if test="ename != null" >
+        #{ename,jdbcType=CHAR},
+      </if>
+      <if test="password != null" >
+        #{password,jdbcType=CHAR},
+      </if>
+      <if test="esex != null" >
+        #{esex,jdbcType=CHAR},
+      </if>
+      <if test="ecard != null" >
+        #{ecard,jdbcType=CHAR},
+      </if>
+      <if test="enumber != null" >
+        #{enumber,jdbcType=CHAR},
+      </if>
+      <if test="ephone != null" >
+        #{ephone,jdbcType=CHAR},
+      </if>
+      <if test="eprovince != null" >
+        #{eprovince,jdbcType=CHAR},
+      </if>
+      <if test="ecity != null" >
+        #{ecity,jdbcType=CHAR},
+      </if>
+      <if test="ecounty != null" >
+        #{ecounty,jdbcType=CHAR},
+      </if>
+      <if test="eduction != null" >
+        #{eduction,jdbcType=CHAR},
+      </if>
+      <if test="email != null" >
+        #{email,jdbcType=CHAR},
+      </if>
+      <if test="company != null" >
+        #{company,jdbcType=CHAR},
+      </if>
+      <if test="edirection != null" >
+        #{edirection,jdbcType=CHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.peace.pms.entity.sys.Expert" >
+    update expert
+    <set >
+      <if test="ename != null" >
+        Ename = #{ename,jdbcType=CHAR},
+      </if>
+      <if test="password != null" >
+        Password = #{password,jdbcType=CHAR},
+      </if>
+      <if test="esex != null" >
+        Esex = #{esex,jdbcType=CHAR},
+      </if>
+      <if test="ecard != null" >
+        Ecard = #{ecard,jdbcType=CHAR},
+      </if>
+      <if test="enumber != null" >
+        Enumber = #{enumber,jdbcType=CHAR},
+      </if>
+      <if test="ephone != null" >
+        Ephone = #{ephone,jdbcType=CHAR},
+      </if>
+      <if test="eprovince != null" >
+        Eprovince = #{eprovince,jdbcType=CHAR},
+      </if>
+      <if test="ecity != null" >
+        Ecity = #{ecity,jdbcType=CHAR},
+      </if>
+      <if test="ecounty != null" >
+        Ecounty = #{ecounty,jdbcType=CHAR},
+      </if>
+      <if test="eduction != null" >
+        Eduction = #{eduction,jdbcType=CHAR},
+      </if>
+      <if test="email != null" >
+        Email = #{email,jdbcType=CHAR},
+      </if>
+      <if test="company != null" >
+        Company = #{company,jdbcType=CHAR},
+      </if>
+      <if test="edirection != null" >
+        Edirection = #{edirection,jdbcType=CHAR},
+      </if>
+    </set>
+    where Eid = #{eid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.peace.pms.entity.sys.Expert" >
+    update expert
+    set Ename = #{ename,jdbcType=CHAR},
+      Password = #{password,jdbcType=CHAR},
+      Esex = #{esex,jdbcType=CHAR},
+      Ecard = #{ecard,jdbcType=CHAR},
+      Enumber = #{enumber,jdbcType=CHAR},
+      Ephone = #{ephone,jdbcType=CHAR},
+      Eprovince = #{eprovince,jdbcType=CHAR},
+      Ecity = #{ecity,jdbcType=CHAR},
+      Ecounty = #{ecounty,jdbcType=CHAR},
+      Eduction = #{eduction,jdbcType=CHAR},
+      Email = #{email,jdbcType=CHAR},
+      Company = #{company,jdbcType=CHAR},
+      Edirection = #{edirection,jdbcType=CHAR}
+    where Eid = #{eid,jdbcType=INTEGER}
+  </update>
+</mapper>

@@ -1,0 +1,60 @@
+.allProject{
+    width: 100%;
+    /* display: flex; */
+}
+.title{
+    width: 100%;
+    height: 2rem;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    display: flex;
+    align-items: center;
+    
+}
+.title>.icon{
+    background-color: #1f94f8;
+    display: inline-block;
+    width: 6px;
+    height: 100%;
+}
+.title>.title-text{
+    padding-left: 4px;
+}
+
+.content{
+    background-color: #dff1ff;
+    width: 100%;
+    height: 570px;
+    padding: 2%;
+    display: flex;
+}
+.content>.contentin{
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+}
+.content>.contentin>.paper{
+    width: 100%;
+    height: 80%;
+}
+.content>.contentin>.btnn{
+    display: flex;
+}
+.content>.contentin>.btnn>input{
+    flex: 1;
+    margin: 40px;
+    width: 8rem;
+    height: 3rem;
+    background-color:#1f94f8;
+    color: #ffffff; 
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+/* .content>.contentin>.btnn>input:hover{
+    box-shadow: 0 8px 12px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.content>.contentin>.btnn>input:active{
+    
+    transform: translateY(4px);
+} */

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.peace.pms.dao.sys.Pro_manMapper" >
+  <resultMap id="BaseResultMap" type="com.peace.pms.entity.sys.Pro_man" >
+    <result column="Pid" property="pid" jdbcType="INTEGER" />
+    <result column="Mid" property="mid" jdbcType="INTEGER" />
+  </resultMap>
+  <insert id="insert" parameterType="com.peace.pms.entity.sys.Pro_man" >
+    insert into pro_man (Pid, Mid)
+    values (#{pid,jdbcType=INTEGER}, #{mid,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.peace.pms.entity.sys.Pro_man" >
+    insert into pro_man
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="pid != null" >
+        Pid,
+      </if>
+      <if test="mid != null" >
+        Mid,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="pid != null" >
+        #{pid,jdbcType=INTEGER},
+      </if>
+      <if test="mid != null" >
+        #{mid,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+
+  <select id="selectByMid" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+    select
+      pid,mid
+    from
+      pro_man
+    where
+      mid=#{mid}
+  </select>
+
+
+</mapper>

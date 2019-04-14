@@ -1,0 +1,170 @@
+.navBar .list .active a{
+    color: #f88f00;
+}
+/* 我的项目 */
+.main .main_info .main_right .myProject {
+    height: 500px;
+}
+
+.main .main_info .main_right .myProject .myProject_top {
+    position: relative;
+}
+
+.main .main_info .main_right .myProject .myProject_top img {
+    vertical-align: bottom;
+}
+
+.main .main_info .main_right .myProject .myProject_top p {
+    margin-left: 10px;
+    margin-top: 15px;
+    font-size: 16px;
+    color: skyblue;
+}
+
+.main .main_info .main_right .myProject .myProject_top .light {
+    color: #f88f00;
+    font-size: 18px;
+}
+
+.main .main_info .main_right .myProject .myProject_top span {
+    display: inline-block;
+    margin-top: 15px;
+}
+
+.main .main_info .main_right .myProject .myProject_top .cor_leader {
+    margin-left: 15px;
+}
+
+.main .main_info .main_right .myProject .myProject_top .cor_name {
+    position: absolute;
+    left: 150px;
+}
+
+.main .main_info .main_right .myProject .operate_btn {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 100px;
+    height: 100px;
+}
+
+.main .main_info .main_right .myProject .operate_btn .manage {
+    width: 100px;
+    height: 25px;
+    margin-top: 20px;
+    border: 0;
+    background-color: #3a95f5;
+    outline: none;
+}
+
+.main .main_info .main_right .myProject .operate_btn .delete {
+    padding-left: 20px;
+    width: 100px;
+    height: 25px;
+    margin-top: 20px;
+    border: 0;
+    outline: none;
+    background-color: #f88f00;
+}
+
+
+.delete {
+    background: url(../images/company/del.png) no-repeat 20px;
+}
+
+.main_left {
+    border-style: none none dashed none;
+    border-width: 1px;
+}
+
+.footer {
+    width: 100%;
+}
+
+.footer .copyRight {
+    margin-top: 5px;
+    text-align: center;
+    line-height: 2.5em;
+    font-size: 11px;
+}
+
+.myProject {
+    background-color: white;
+}
+
+.myProject_bot {
+    margin-top: 15px;
+     height:70px;
+}
+
+div[class|="myProject-word"] {
+    display: inline-block;
+    line-height: 25px;
+    position: absolute;
+}
+
+.word-title {
+    color: rgb(206, 205, 210);
+}
+
+.myProject-word-lixiang {
+    left: 25px;
+    width: 135px;
+    border-style: none solid none none;
+    border-color: rgb(239, 239, 239);
+    border-right-width: 1px
+}
+
+.myProject-word-leixing {
+    left: 165px;
+    width: 124px;
+    padding-right: 40px;
+    border-style: none solid none none;
+    border-color: rgb(239, 239, 239);
+    border-right-width: 1px
+}
+
+.myProject-word-jibie {
+    left: 295px;
+    width: 125px;
+    padding-right: 10px;
+    border-style: none solid none none;
+    border-color: rgb(239, 239, 239);
+    border-right-width: 1px
+}
+
+.myProject-word-zhuangtai {
+    left: 415px;
+    margin-left: 10px;
+}
+
+.myProject .myProject-btn {
+    text-align: center;
+    margin-top: 280px;
+}
+
+button[class|="btn"] {
+    background-color: rgb(237, 237, 237);
+    width: 20px;
+    height: 20px;
+    border: 0;
+}
+
+.myProject .myProject-btn button:hover {
+    background-color: rgb(46, 116, 195);
+    color: white;
+}
+
+
+/* 资质认证 */
+#upload{
+    position: absolute;
+    margin-left:-20px;
+    margin-top:-20px;
+    opacity: 0;
+    cursor: pointer;
+}
+.btn-primary{
+    width:100px;
+    margin-top:12px;
+}

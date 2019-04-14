@@ -1,0 +1,585 @@
+.header {
+    padding: 0 15px;
+    height: 50px;
+    background-color: rgba(192, 224, 224, 0.6);
+}
+
+.header img {
+    width: 25px;
+    height: 25px;
+}
+
+.header a {
+    color: #000;
+    font-size: 14px;
+}
+
+.header a:hover {
+    color: red;
+}
+
+.header .head_left,
+.header .head_right {
+    margin-top: 11.5px;
+}
+
+.header .head_left {
+    float: left;
+}
+
+.header .head_right {
+    float: right;
+}
+
+.header ul {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.header ul li {
+    position: absolute;
+    padding: 5px;
+    width: 50px;
+    text-align: center;
+    background-color: rgba(192, 224, 224, 0.6);
+    cursor: pointer;
+}
+
+.navBar {
+    height: 70px;
+    border-bottom: 1px solid #ccc;
+}
+
+.navBar .list {
+    padding: 0 100px;
+    margin: 0 auto;
+    width: 900px;
+}
+
+.navBar .list span {
+    color: #3366cc;
+    font-size: 40px;
+    vertical-align: middle;
+}
+
+.navBar .list li.active {
+    border-bottom: 4px solid #ff6633;
+}
+
+.navBar .list li.active span {
+    color: #ff6633;
+}
+
+.navBar .list li {
+    display: inline-block;
+    width: 260px;
+    text-align: center;
+    line-height: 66px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.navBar .list li:nth-child(1) {
+    margin-right: 85px;
+}
+
+.navBar .list li:nth-child(2) {
+    margin-left: 85px;
+}
+
+.main {
+    padding: 30px 0;
+    background: url(../images/company/bg.png) center center fixed;
+    background-size: cover;
+}
+
+.main .main_info {
+    padding: 15px 15px 0 15px;
+    width: 75%;
+    height: 800px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    background-color: rgb(223, 241, 255);
+}
+
+.main .main_info .main_left {
+    float: left;
+    width: 25%;
+}
+
+.main .main_info .main_right {
+    float: left;
+    margin-bottom: 14px;
+    width: 75%;
+    border: 1px solid #eee;
+}
+
+.main .main_info .main_right .details {
+    position: relative;
+    padding: 10px;
+    width: 96%;
+    margin: 14px 0 14px 17px;
+}
+
+.details {
+    background-color: white;
+}
+
+.main .main_info .main_right .projectManage .nav {
+    margin-right: 20px;
+    margin-bottom: 50px;
+}
+
+.main .main_info .main_right .projectManage .nav li {
+    margin-right: 10px;
+}
+
+.main .main_info .main_right .projectManage #projectList {
+    margin-bottom: 50px;
+}
+
+.main .main_info .main_right .projectManage #projectList li {
+    border-bottom: 1px solid #f5f5f5;
+    font-size: 1.25em;
+}
+
+.main .main_info .main_right .projectManage #projectList li .download {
+    float: right;
+    cursor: pointer;
+}
+
+.main .main_info .main_right .projectManage form.uploadArea {
+    position: relative;
+    display: flex;
+    padding: 15px;
+    margin-bottom: 60px;    
+}
+
+.main .main_info .main_right .projectManage form.uploadArea .areaLeft {
+    position: relative;
+    flex: 1.5;
+    margin-right: 20px;
+    height: 200px;
+    border: 3px dashed #666;
+    border-radius: 5px;
+}
+
+.main .main_info .main_right .projectManage form.uploadArea .areaLeft .folder {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -14px 0 0 -14px;
+    font-size: 2em;
+}
+
+.main .main_info .main_right .projectManage form.uploadArea .areaLeft .submit {
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    margin-left: -75px;
+    width: 150px;
+    height: 50px;
+    background-color: #3a95f5;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1.5em;
+    line-height: 50px;
+    color: #fff;
+
+}
+
+.main .main_info .main_right .projectManage form.uploadArea .areaLeft .submit #inputfile {
+    position: absolute;
+    overflow: hidden;
+    opacity: 0;
+    left: 50%;
+    bottom: 0;
+    margin-left: -75px;
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    font-size: 1.6em;   /*使input占满整个a标签*/
+}
+
+
+.main .main_info .main_right .projectManage form.uploadArea .areaRight {
+    flex: 2;
+    height: 200px;
+    text-align: center;
+    border: 3px dashed #666;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+}
+
+.main .main_info .main_right .projectManage form.uploadArea .areaRight .tip {
+    line-height: 200px;
+    font-size: 1.5em;
+    color: #666;
+}
+
+.main .main_info .main_right .projectManage form.uploadArea button {
+    position: absolute;
+    right: 15px;
+    bottom: -40px;
+}
+
+.main .main_info .main_right .projectManage .pjProgress .firstCheck {
+    border-bottom: 1px solid #f88f00;
+}
+
+.main .main_info .main_right .projectManage .pjProgress .firstCheck::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.main .main_info .main_right .projectManage .pjProgress  span {
+    float: left;
+    width: 35px;    
+    font-size: 16px;
+    color: #f88f00;
+}
+
+.main .main_info .main_right .projectManage .pjProgress .firstCheck ul {
+    float: left;
+    margin-left: 120px;
+    margin-top: 13px;
+}
+
+.main .main_info .main_right .projectManage .pjProgress .middleCheck {
+    position: relative;
+    margin-top: 20px;
+}
+
+.main .main_info .main_right .projectManage .pjProgress .middleCheck span {
+    position: absolute;
+    top: 50%;
+    margin-top: -22px;
+}
+
+.main .main_info .main_right .projectManage .pjProgress .middleCheck table.table {
+    margin-left: 20%;
+    width: 80%;
+}
+
+.main .main_info .main_right .projectManage .pjProgress .middleCheck table.table .txt {
+    height: 230px;
+}
+
+/*进度报告*/
+.main .main_info .main_right .projectManage .pjReport {
+    padding-top: 150px;
+    padding-bottom: 200px;
+    background-color: white;
+    border: 0 white;
+    font-size: 0;       /*解决inline和inline-block的空隙bug*/
+    text-align: center;
+}
+
+.main .main_info .main_right .projectManage .pjReport div{
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 20px; 
+    
+}
+.main .main_info .main_right .projectManage .pjReport .circle{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgb(201, 201, 201);
+}
+.main .main_info .main_right .projectManage .pjReport .line{
+    width: 60px;
+    height: 5px;
+    background-color: rgb(201, 201, 201);
+}
+.main .main_info .main_right .projectManage .pjReport span{
+    position: absolute;
+    bottom: -20px;
+    right: 0;
+    width: 60px;
+    font-size: 14px;
+}
+.main .main_info .main_right .projectManage .pjReport div:nth-child(-n+3){
+    background-color: blue;
+}
+
+.main .main_info .main_right .details .identify {
+    height: 500px;
+}
+
+.main .main_info .main_right .details .identify .explain {
+    color: red;
+    font-size: 16px;
+    border-bottom: 1px solid #ccc;
+}
+
+.main .main_info .main_right .details .identify .outcome_1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -90px 0 0 -305px;
+    width: 610px;
+    height: inherit;
+    text-align: center;
+}
+
+.main .main_info .main_right .details .identify .outcome_1 p {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.main .main_info .main_right .details .identify .outcome_1 .out_btn {
+    margin: 30px auto;
+    width: 500px;
+    height: 97px;
+}
+
+.main .main_info .main_right .details .identify .outcome_1 .out_btn button {
+    outline: none;
+    width: 97px;
+    height: 32px;
+    margin: 10px 52px 0 52px;
+}
+
+.main .main_info .main_right .details .identify .outcome_2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -90px 0 0 -155px;
+    padding-top: 68px;
+    width: 310px;
+    height: 180px;
+    border: 2px solid #3399cc;
+    border-radius: 2px;
+    background-color: #eee;
+}
+
+.main .main_info .main_right .details .identify .outcome_2 p {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.main .main_info .main_right .details .identify .outcome_2 .close {
+    outline: none;
+    position: absolute;
+    right: 3px;
+    top: 3px;
+}
+
+.main .main_info .main_right .details .identify .outcome_3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -90px 0 0 -155px;
+    padding-top: 68px;
+    width: 310px;
+    height: 180px;
+    border: 1px solid blue;
+}
+
+.main .main_info .main_right .details .identify .outcome_3 p {
+    text-align: center;
+    font-size: #666;
+    color: #666;
+}
+
+.main .main_info .main_right .details .identify .outcome_4 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -90px 0 0 -155px;
+    width: 310px;
+    height: 180px;
+    text-align: center;
+}
+
+.main .main_info .main_right .details .identify .outcome_4 p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.main .main_info .main_right .details .changeBox {
+    height: 500px;
+}
+
+.main .main_info .main_right .details .change {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -110px 0 0 -250px;
+    width: 500px;
+    height: inherit;
+}
+
+.main .main_info .main_right .details .change .form-horizontal .btn {
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    width: 90px;
+    margin-left: -45px;
+}
+
+.main .main_info .main_right .details .operate_btn {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 100px;
+    height: 100px;
+}
+
+.main .main_info .main_right .details .operate_btn button {
+    padding: 0;
+    width: 100px;
+    height: 25px;
+    margin-top: 20px;
+    border: 0;
+}
+
+.main .main_info .main_right .details .operate_btn .modify {
+    background-color: #3a95f5;
+}
+
+.main .main_info .main_right .details .operate_btn .delete {
+    background-color: #f88f00;
+}
+
+.footer {
+    width: 100%;
+}
+
+.footer .copyRight {
+    margin-top: 30px;
+    text-align: center;
+    line-height: 2.5em;
+    font-size: 11px;
+}
+
+.name {
+    font-size: 20px;
+    color: rgb(54, 154, 254);
+    display: block;
+    margin-top: 20px;
+}
+
+.main_left {
+    text-align: center;
+    border-style: none none dashed none;
+    border-width: 1px;
+}
+
+.applicant {
+    font-size: 14px;
+    display: block;
+    margin-top: 20px;
+}
+
+.my-form {
+    background-color: white;
+    position: relative;
+    padding: 10px;
+    width: 692px;
+    height: 600px;
+}
+
+.title {
+    border-style: none none solid none;
+    border-color: rgb(221, 221, 221);
+    border-bottom-width: 1px;
+    padding-bottom: 5px;
+}
+
+.Chinese-title {
+    color: #3366cc;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.English-title {
+    padding: 8px;
+    font-size: 16px;
+    color: #bfbfbf;
+    font-weight: 100;
+    font-style: italic;
+}
+
+.table-up {
+    margin-top: 10px;
+}
+
+.table-down {
+    margin-top: 10px;
+}
+
+.table-up .table-up tr td {
+    border: 1px solid rgb(221, 221, 221);
+}
+
+.table-up tr td {
+    border: 1px solid rgb(221, 221, 221);
+}
+
+.table-down tr td {
+    border: 1px solid rgb(221, 221, 221);
+}
+
+.table-otd {
+    width: 165px;
+    text-align: right;
+}
+
+.table-ttd {
+    width: 180px;
+}
+
+.talbe-time {
+    text-align: center;
+}
+
+.form-text {
+    height: 20px;
+}
+
+.cpclass {
+    width: 150px;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.personal-button {
+    text-align: center
+}
+
+button[class|="personal-button"] {
+    color: white;
+    border: 0;
+    padding: 5px 15px;
+}
+
+.personal-button-left {
+    background-color: rgb(58, 149, 245);
+}
+
+.personal-button-right {
+    margin-left: 50px;
+    background-color: rgb(255, 102, 51);
+}
+
+.form-table2 {
+    display: none;
+}
+
+.jq-tableblock {
+    display: block;
+}
+
+.jq-tablenone {
+    display: none;
+}
+
+.show-hide div:nth-child(n+2){
+    display: none;  
+}

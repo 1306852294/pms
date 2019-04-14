@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.peace.pms.dao.sys.ManagerMapper" >
+  <resultMap id="BaseResultMap" type="com.peace.pms.entity.sys.Manager" >
+    <id column="Mid" property="mid" jdbcType="INTEGER" />
+    <result column="Mnum" property="mnum" jdbcType="INTEGER" />
+    <result column="Password" property="password" jdbcType="CHAR" />
+    <result column="Mname" property="mname" jdbcType="CHAR" />
+    <result column="Msex" property="msex" jdbcType="CHAR" />
+    <result column="Mcard" property="mcard" jdbcType="CHAR" />
+    <result column="Mphone" property="mphone" jdbcType="CHAR" />
+    <result column="Mcompany" property="mcompany" jdbcType="CHAR" />
+    <result column="Mdepartment" property="mdepartment" jdbcType="CHAR" />
+    <result column="Mfox" property="mfox" jdbcType="CHAR" />
+    <result column="Memail" property="memail" jdbcType="CHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    Mid, Mnum, Password, Mname, Msex, Mcard, Mphone, Mcompany, Mdepartment, Mfox, Memail
+  </sql>
+
+
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from manager
+    where Mid = #{mid,jdbcType=INTEGER}
+  </select>
+
+  <select id="selectByEmail" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select
+    <include refid="Base_Column_List" />
+    from manager
+    where  Memail= #{Email,jdbcType=CHAR}
+  </select>
+
+
+
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from manager
+    where Mid = #{mid,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.peace.pms.entity.sys.Manager" >
+    insert into manager (Mid, Mnum, Password, 
+      Mname, Msex, Mcard, Mphone, 
+      Mcompany, Mdepartment, Mfox, 
+      Memail)
+    values (#{mid,jdbcType=INTEGER}, #{mnum,jdbcType=INTEGER}, #{password,jdbcType=CHAR}, 
+      #{mname,jdbcType=CHAR}, #{msex,jdbcType=CHAR}, #{mcard,jdbcType=CHAR}, #{mphone,jdbcType=CHAR}, 
+      #{mcompany,jdbcType=CHAR}, #{mdepartment,jdbcType=CHAR}, #{mfox,jdbcType=CHAR}, 
+      #{memail,jdbcType=CHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.peace.pms.entity.sys.Manager" >
+    insert into manager
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="mid != null" >
+        Mid,
+      </if>
+      <if test="mnum != null" >
+        Mnum,
+      </if>
+      <if test="password != null" >
+        Password,
+      </if>
+      <if test="mname != null" >
+        Mname,
+      </if>
+      <if test="msex != null" >
+        Msex,
+      </if>
+      <if test="mcard != null" >
+        Mcard,
+      </if>
+      <if test="mphone != null" >
+        Mphone,
+      </if>
+      <if test="mcompany != null" >
+        Mcompany,
+      </if>
+      <if test="mdepartment != null" >
+        Mdepartment,
+      </if>
+      <if test="mfox != null" >
+        Mfox,
+      </if>
+      <if test="memail != null" >
+        Memail,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="mid != null" >
+        #{mid,jdbcType=INTEGER},
+      </if>
+      <if test="mnum != null" >
+        #{mnum,jdbcType=INTEGER},
+      </if>
+      <if test="password != null" >
+        #{password,jdbcType=CHAR},
+      </if>
+      <if test="mname != null" >
+        #{mname,jdbcType=CHAR},
+      </if>
+      <if test="msex != null" >
+        #{msex,jdbcType=CHAR},
+      </if>
+      <if test="mcard != null" >
+        #{mcard,jdbcType=CHAR},
+      </if>
+      <if test="mphone != null" >
+        #{mphone,jdbcType=CHAR},
+      </if>
+      <if test="mcompany != null" >
+        #{mcompany,jdbcType=CHAR},
+      </if>
+      <if test="mdepartment != null" >
+        #{mdepartment,jdbcType=CHAR},
+      </if>
+      <if test="mfox != null" >
+        #{mfox,jdbcType=CHAR},
+      </if>
+      <if test="memail != null" >
+        #{memail,jdbcType=CHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.peace.pms.entity.sys.Manager" >
+    update manager
+    <set >
+      <if test="mnum != null" >
+        Mnum = #{mnum,jdbcType=INTEGER},
+      </if>
+      <if test="password != null" >
+        Password = #{password,jdbcType=CHAR},
+      </if>
+      <if test="mname != null" >
+        Mname = #{mname,jdbcType=CHAR},
+      </if>
+      <if test="msex != null" >
+        Msex = #{msex,jdbcType=CHAR},
+      </if>
+      <if test="mcard != null" >
+        Mcard = #{mcard,jdbcType=CHAR},
+      </if>
+      <if test="mphone != null" >
+        Mphone = #{mphone,jdbcType=CHAR},
+      </if>
+      <if test="mcompany != null" >
+        Mcompany = #{mcompany,jdbcType=CHAR},
+      </if>
+      <if test="mdepartment != null" >
+        Mdepartment = #{mdepartment,jdbcType=CHAR},
+      </if>
+      <if test="mfox != null" >
+        Mfox = #{mfox,jdbcType=CHAR},
+      </if>
+      <if test="memail != null" >
+        Memail = #{memail,jdbcType=CHAR},
+      </if>
+    </set>
+    where Mid = #{mid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.peace.pms.entity.sys.Manager" >
+    update manager
+    set Mnum = #{mnum,jdbcType=INTEGER},
+      Password = #{password,jdbcType=CHAR},
+      Mname = #{mname,jdbcType=CHAR},
+      Msex = #{msex,jdbcType=CHAR},
+      Mcard = #{mcard,jdbcType=CHAR},
+      Mphone = #{mphone,jdbcType=CHAR},
+      Mcompany = #{mcompany,jdbcType=CHAR},
+      Mdepartment = #{mdepartment,jdbcType=CHAR},
+      Mfox = #{mfox,jdbcType=CHAR},
+      Memail = #{memail,jdbcType=CHAR}
+    where Mid = #{mid,jdbcType=INTEGER}
+  </update>
+</mapper>

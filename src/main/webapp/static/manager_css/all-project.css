@@ -1,0 +1,290 @@
+.containe {
+    width: 100%;
+    padding: 3%;
+    display: flex;
+}
+
+.containe>.container-left {
+    flex: 1;
+    padding-right: 15px;
+}
+
+.containe>.container-left>.title,
+.submitManage>.title {
+    width: 100%;
+    height: 4rem;
+    margin-left: 0;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    display: flex;
+    font-size: 1.5rem;
+    align-items: center;
+}
+
+.containe>.container-left>.title>.icon,
+.submitManage>.title>.icon {
+    background-color: #1f94f8;
+    display: inline-block;
+    width: 6px;
+    height: 25px;
+}
+
+.containe>.container-left>.title>.title-text,
+.submitManage>.title>.title-text {
+    padding-left: 4px;
+}
+
+.containe>.container-left>.type {
+    position: relative;
+    width: 100%;
+    height: 4rem;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #acb9db;
+}
+
+.containe>.container-left>.type span.glyphicon-remove {
+    position: absolute;
+    right: 15px;
+    top: 20px;
+    cursor: pointer;
+}
+
+.containe>.container-left>button {
+    margin: 15px 30px;
+    width: 135px;
+    height: 35px;
+}
+
+.containe>.container-right {
+    flex: 3;
+    border-left: 1px solid #acb9db;
+    padding-left: 15px;
+    height: 100%;
+}
+
+.containe>.container-right>.submit {
+    position: relative;
+    padding-top: 15px;
+    width: 100%;
+    height: 800px;
+    background-color: #fff;
+}
+
+.containe>.container-right>.submit>h3 {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    border-bottom: 1px solid #666;
+}
+
+.containe>.container-right>.submit>.submitMain {
+    margin: 25px auto;
+    width: 90%;
+    height: 620px;
+    border: 1px solid #666;
+}
+
+.containe>.container-right>.submit>.submitBot {
+    position: relative;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.containe>.container-right>.submit>.submitBot>a {
+    position: absolute;
+    left: 30px;
+    top: -17px;
+    color: #f78e01;
+}
+
+.containe>.container-right>.submit>.submitBot>button {
+    width: 110px;
+    height: 35px;
+}
+
+.containe>.container-right>.submit>.outcome {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -90px 0 0 -155px;
+    padding-top: 68px;
+    width: 310px;
+    height: 180px;
+    border: 2px solid #3399cc;
+    border-radius: 2px;
+    background-color: #eee;
+}
+
+.containe>.container-right>.submit>.outcome>p {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.containe>.container-right>.container-right-header {
+    width: 100%;
+    display: flex;
+    height: 2rem;
+    margin-bottom: 1rem;
+    min-width: 667px;
+}
+
+.containe>.container-right>.container-right-header>.icons {
+    flex: 1;
+    display: flex;
+    height: 2rem;
+}
+
+.containe>.container-right>.container-right-header>.icons>.item {
+    flex: 1;
+    height: 2rem;
+    line-height: 2rem;
+    margin-right: 3%;
+    background-color: #ffffff;
+    color: #000000;
+    align-items: center;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.containe>.container-right>.container-right-header>.icons>.activee {
+    background-color: #1f94f8;
+    color: #ffffff;
+    flex: 1;
+    height: 2rem;
+    line-height: 2rem;
+    margin-right: 3%;
+    align-items: center;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.containe>.container-right>.container-right-header>.search {
+    flex: 1;
+    height: 2rem;
+}
+
+.containe>.container-right>.container-right-header>.search>input {
+    width: 50%;
+    height: 2rem;
+    border-radius: 5px;
+    margin-left: 5%;
+    border: none;
+}
+
+.containe>.container-right>.container-right-header>.search>button {
+    background-color: #f78e01;
+    width: 15%;
+    color: #ffffff;
+    height: 2rem;
+    line-height: 2rem;
+    /* width: 4rem; */
+    border: none;
+    border-radius: 5px;
+}
+
+.containe>.container-right-center {
+    width: 100%;
+}
+
+.containe>.container-right-center>table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table.tProject td,
+table tr {
+    border: 1px solid #acb9db;
+    height: 4rem;
+    width: 48rem;
+    background-color: #ffffff;
+}
+
+table.tProject td {
+    position: relative;
+    padding-left: 15px;
+    font-size: 18px;
+}
+
+table.tProject td span {
+    position: absolute;
+    right: 15px;
+    top: 20px;
+    font-size: 18px;
+    color: #f78e01;
+    cursor: pointer;
+}
+
+
+/* pass or false */
+
+table.tProject td span.pass {
+    position: absolute;
+    right: 15px;
+    top: 20px;
+    font-size: 14px;
+    color: blue;
+}
+
+table.tProject td span.false {
+    position: absolute;
+    right: 15px;
+    top: 20px;
+    font-size: 14px;
+    color: red;
+}
+
+
+/* waiting */
+
+table.tProject td span.pWaiting {
+    position: absolute;
+    right: 15px;
+    top: 20px;
+    font-size: 14px;
+    color: #666;
+}
+
+table.tProject th {
+    width: 7rem;
+    text-align: center;
+    vertical-align: center;
+}
+
+.blue {
+    background-color: #dff1ff;
+}
+
+.container-right-footer {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.container-right-footer>.pages {
+    width: 2rem;
+    height: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    color: #1f94f8;
+    background-color: #ffffff;
+    float: left;
+    margin-right: 4px;
+    cursor: pointer;
+}
+
+.container-right-footer>.active {
+    color: #ffffff;
+    background-color: #ff6633;
+    width: 2rem;
+    height: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    float: left;
+    margin-right: 4px;
+    cursor: pointer;
+}

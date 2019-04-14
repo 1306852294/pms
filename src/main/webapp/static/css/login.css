@@ -1,0 +1,91 @@
+body{
+    height: 800px;
+}
+*{
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+}
+a:link{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none;
+}
+button:active{
+    outline: none;
+}
+li{
+    list-style: none;
+    float: left;
+    color: white;
+}
+table{
+    background-color: white;
+}
+.menu li a{
+    background-color: #3796da;
+    color: white;
+    display: block;
+    font-size: 16px;
+    width: 102px;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    border-radius: 5px 5px 0
+}
+.menu li{
+    margin-right: 20px;   
+}
+
+/* .menu li button{
+    background-color: #3796da;
+} */
+.table{
+    /* margin-top: 50px; */
+    padding: 20px;
+}
+div[id|=more-infoo]{
+    display: none;
+}
+#more-infoo-applicant{
+    display: block;
+    padding-left: 21px;
+    padding-right: 21px;
+}
+#choose{
+    width: 138px;
+    text-align: center;
+}
+.infoo{
+    font-weight: bold;
+    line-height: 40px;
+}
+.container{
+    background-color:#dfeef5;
+}
+#applicant{
+    background-color: white;
+    color: #3796da;
+}
+/* tr:nth-last-of-type(odd){
+    background-color: red;
+} */
+
+.submit {
+    display: block;
+    width: 102px;
+    height: 48px;
+    font-size: 16px;
+    width: 240px;
+    margin: 0 auto;
+}
+.btn-group{
+    width: 100%;
+    margin-left: 37px;
+}
+.bottom{
+    padding: 0 auto;
+   float: right;
+   margin-bottom: 20px;
+}

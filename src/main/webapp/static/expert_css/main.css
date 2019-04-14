@@ -1,0 +1,527 @@
+.header {
+    padding: 0 15px;
+    height: 50px;
+    background-color: rgba(192, 224, 224, 0.6);
+}
+
+.header img {
+    width: 25px;
+    height: 25px;
+}
+
+.header a {
+    color: #000;
+    font-size: 14px;
+}
+
+.header a:hover {
+    color: red;
+}
+
+.header .head_left,
+.header .head_right {
+    margin-top: 11.5px;
+}
+
+.header .head_left {
+    float: left;
+}
+
+.header .head_right {
+    float: right;
+}
+
+.header ul {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.header ul li {
+    position: absolute;
+    padding: 5px;
+    width: 50px;
+    text-align: center;
+    background-color: rgba(192, 224, 224, 0.6);
+    cursor: pointer;
+}
+
+.navBar {
+    height: 70px;
+    border-bottom: 1px solid #ccc;
+}
+
+.navBar .list {
+    padding: 0 100px;
+    margin: 0 auto;
+    width: 900px;
+}
+
+.navBar .list span {
+    color: #3366cc;
+    font-size: 40px;
+    vertical-align: middle;
+}
+
+.navBar .list li.active {
+    border-bottom: 4px solid #ff6633;
+}
+
+.navBar .list li.active span {
+    color: #ff6633;
+}
+
+.navBar .list li {
+    display: inline-block;
+    width: 260px;
+    text-align: center;
+    line-height: 66px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.navBar .list li:nth-child(1) {
+    margin-right: 85px;
+}
+
+.navBar .list li:nth-child(2) {
+    margin-left: 85px;
+}
+
+.main {
+    padding: 30px 0;
+    background: url(../images/expert/bg.png) center center fixed;
+    background-size: cover;
+}
+
+.main .main_info {
+    padding: 15px 15px 0 15px;
+    width: 75%;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    background-color: rgb(223, 241, 255);
+}
+
+.containe{
+    width: 100%;
+    height: 100%;
+    padding: 3%;
+    
+    display: flex;
+}
+.containe>.container-left{
+    flex: 1;
+    padding-right: 15px;
+}
+
+.main .title{
+    width: 75%;
+    /* height: 4rem; */
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin-left: 30px;
+    display: flex;
+    align-items: center;
+    
+}
+.main .title>.icon{
+    background-color: #1f94f8;
+    display: inline-block;
+    width: 10px;
+    height: 26px;
+}
+.main .title>.title-text{
+    padding-left: 4px;
+    font-size: 1.14rem;
+}
+.containe>.container-left>.type{
+    width: 100%;
+    height: 4rem;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid  #acb9db;
+    cursor: pointer;
+    font-size: 1.14rem;
+}
+.containe>.container-left>.active{
+    background-color:#ffffff; 
+    width: 100%;
+    height: 4rem;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid  #acb9db;
+    cursor: pointer;
+    font-size: 1.14rem;
+}
+
+/*评审项目*/
+.containe>.eva{
+    flex: 3;
+    border-left: 1px solid  #acb9db;
+    padding-left: 15px;
+    height: 100%;
+}
+.containe>.eva>.rightcon{
+    width: 100%;
+    background-color: #ffffff;
+    height: 500px;
+}
+.containe>.eva>.rightcon .rightcon-header{
+    width: 100%;
+    display: flex;
+}
+
+.containe>.eva>.rightcon .rightcon-header>.titleb{
+    flex: 3;
+    /* width: 100%; */
+    /* height: 4rem; */
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    
+}
+.containe>.eva>.rightcon .rightcon-header>.titleb>.iconb{
+    background-color: #ee910b;
+    display: inline-block;
+    width: 10px;
+    height: 26px;
+}
+.containe>.eva>.rightcon .rightcon-header>.titleb>.title-textb{
+    padding-left: 4px;
+    font-size: 1.14rem;
+}
+.containe>.eva>.rightcon .rightcon-header>input{
+    flex: 1;
+    margin-left: 10%;
+    outline: none;
+}
+.containe>.eva>.container-right-footer{
+    width: 100%;
+    text-align: center;
+    margin-top: 2rem;
+}
+.containe>.eva>.container-right-footer>input{
+    outline: none;
+}
+
+/*评审规则*/
+.containe>.rules{
+    flex: 3;
+    border-left: 1px solid  #acb9db;
+    padding-left: 15px;
+    height: 100%;
+}
+.containe>.rules>.rightcon{
+    width: 100%;
+    background-color: #ffffff;
+    height: 500px;
+}
+.containe>.rules>.rightcon .rightcon-header{
+    width: 100%;
+
+    
+}
+.containe>.rules>.rightcon .rightcon-header>.glyphicon{
+    float: right;
+}
+
+
+
+
+/*开始打分*/
+.containe>.marks{
+    flex: 3;
+    border-left: 1px solid  #acb9db;
+    padding-left: 15px;
+    height: 100%;
+}
+.containe>.marks>.rightcon{
+    width: 100%;
+    background-color: #ffffff;
+    /* height: 500px; */
+}
+.containe>.marks>.rightcon .rightcon-header{
+    width: 100%;
+    display: flex;
+}
+
+.containe>.marks>.rightcon .rightcon-header>.titleb{
+    flex: 3;
+    /* width: 100%; */
+    /* height: 4rem; */
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    
+}
+.containe>.marks>.rightcon .rightcon-header>.titleb>.iconb{
+    background-color: #ee910b;
+    display: inline-block;
+    width: 10px;
+    height: 26px;
+}
+.containe>.marks>.rightcon .rightcon-header>.titleb>.title-textb{
+    padding-left: 4px;
+    font-size: 1.14rem;
+}
+.containe>.marks>.rightcon .rightcon-header>input{
+    flex: 1;
+    margin-left: 10%;
+    outline: none;
+}
+.containe>.marks>.rightcon .rightcon-con{
+    padding: 2rem;
+    width: 100%;
+    height: 10rem;
+    display: flex;
+}
+.containe>.marks>.rightcon .rightcon-con .text{
+    flex: 1;
+    height: 10rem;
+    border-left: 1px solid #000000;
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    text-align: center;
+    line-height: 10rem;
+}
+.containe>.marks>.rightcon .rightcon-con .opinion{
+    flex: 3;
+    height: 10rem;
+}
+.containe>.marks>.rightcon .rightcon-con .opinion textarea{
+    width: 100%;
+    border: 1px solid #000000; 
+    height: 10rem;
+}
+.containe>.marks>.rightcon .rightcon-btn{
+    padding: 2rem;
+    padding-top: 3rem;
+    display: flex;
+    width: 100%;
+}
+.containe>.marks>.rightcon .rightcon-btn input{
+    background-color: #ee910b;
+    border: none;
+}
+.containe>.marks>.rightcon .other,.table{
+    padding: 2rem;
+    width: 100%;
+    padding-top: 0;
+    /* height: 10rem; */
+}
+.containe>.marks>.rightcon .other>textarea{
+    width: 100%;
+    overflow: scroll;
+    height: 9rem;
+}
+.containe>.marks>.rightcon .table>table{
+    width: 100%;
+    text-align: center;
+}
+.containe>.marks>.rightcon .table>table input{
+    width: 100%;
+}
+.containe>.marks>.container-right-footer{
+    width: 100%;
+    text-align: center;
+    margin-top: 2rem;
+}
+.containe>.marks>.container-right-footer>input{
+    outline: none;
+    width: 9rem;
+}
+table tr td:nth-last-child(1){
+    width: 26%;
+}
+
+
+/*个人中心*/
+.main {
+    padding: 30px 0;
+    background: url(../images/expert/bg.png) center center fixed;
+    background-size: cover;
+}
+
+.main .main_info {
+    padding: 15px 15px 0 15px;
+    width: 75%;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    background-color: rgb(223, 241, 255);
+}
+
+.main .main_info .main_left {
+    float: left;
+    width: 25%;
+}
+
+.main .main_info .main_right {
+    float: left;
+    margin-bottom: 14px;
+    width: 75%;
+    border: 1px solid #eee;
+}
+
+.main .main_info .main_right .details {
+    position: relative;
+    padding: 10px;
+    width: 96%;
+    margin: 14px 0 14px 17px;
+}
+
+.details {
+    background-color: white;
+}
+
+.name {
+    font-size: 20px;
+    color: rgb(54, 154, 254);
+    display: block;
+    margin-top: 20px;
+}
+
+.main_left {
+    text-align: center;
+    border-style: none none dashed none;
+    border-width: 1px;
+}
+
+
+/*信息管理*/
+
+.my-form {
+    background-color: white;
+    position: relative;
+    padding: 10px;
+    width: 692px;
+    height: 600px;
+}
+
+.title {
+    border-style: none none solid none;
+    border-color: rgb(221, 221, 221);
+    border-bottom-width: 1px;
+    padding-bottom: 5px;
+}
+
+.Chinese-title {
+    color: #3366cc;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.English-title {
+    padding: 8px;
+    font-size: 16px;
+    color: #bfbfbf;
+    font-weight: 100;
+    font-style: italic;
+}
+
+.table-up {
+    margin-top: 10px;
+}
+
+.table-down {
+    margin-top: 10px;
+}
+
+.table-up .table-up tr td {
+    border: 1px solid rgb(221, 221, 221);
+}
+
+.table-up tr td {
+    border: 1px solid rgb(221, 221, 221);
+}
+
+.table-down tr td {
+    border: 1px solid rgb(221, 221, 221);
+}
+
+.table-otd {
+    width: 165px;
+    text-align: right;
+}
+
+.table-ttd {
+    width: 180px;
+}
+
+.talbe-time {
+    text-align: center;
+}
+
+.form-text {
+    height: 20px;
+}
+
+.cpclass {
+    width: 150px;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.personal-button {
+    text-align: center
+}
+
+button[class|="personal-button"] {
+    color: white;
+    border: 0;
+    padding: 5px 15px;
+}
+
+.personal-button-left {
+    background-color: rgb(58, 149, 245);
+}
+
+.personal-button-right {
+    margin-left: 50px;
+    background-color: rgb(255, 102, 51);
+}
+
+/*密码修改*/
+.main .main_info .main_right .details #changeBox {
+    height: 500px;
+}
+
+.main .main_info .main_right .details .change {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -110px 0 0 -250px;
+    width: 500px;
+    height: inherit;
+}
+
+.main .main_info .main_right .details .change .form-horizontal .btn {
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    width: 90px;
+    margin-left: -45px;
+}
+
+
+
+
+
+.footer {
+    width: 100%;
+    border-top: 1px solid #3366cc;
+}
+
+.footer .copyRight {
+    margin-top: 30px;
+    text-align: center;
+    line-height: 2.5em;
+    font-size: 11px;
+}

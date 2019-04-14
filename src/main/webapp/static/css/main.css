@@ -1,0 +1,139 @@
+.container {
+    margin-top: 50px;
+}
+.notice {
+    padding-top: 10px;
+    width: 100%;
+    height: 357px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px #888888;
+}
+
+.noticetop {
+    position: relative;
+    width: 95%;
+    height: 30px;
+    line-height: 27px;
+    text-align: left;
+    background: url(../images/index/bot_pic.png) no-repeat;
+    background-position: 38px 28px;
+    padding-left: 38px;
+    border-radius: 10px;
+}
+
+.noticetop span, .login .login_letter span {
+    vertical-align: middle;
+    font-size: 18px;
+    font-weight: bold;
+     color: #0755D0;
+}
+
+.moreplus {
+    position: absolute;
+    right: 4px;
+}
+
+.noticemb ul {
+    padding: 0;
+    margin: 0;
+    padding-left: 8px;
+    padding-top: 11px;
+}
+
+.noticemb ul li {
+    background: url(../images/index/hua.jpg) no-repeat 2px 7px;
+    padding-left: 13px;
+    list-style: none;
+    margin: 0 24px 0 16px;
+    line-height: 1.6em;
+}
+
+.noticemb {
+    background: url(../images/index/noticenrbg.jpg) repeat-x bottom;
+    text-align: left;
+}
+
+.litext {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 300px;
+    display: inline-block;
+}
+
+.date {
+    float: right;
+    padding-right: 11px;
+}
+
+.noticemb ul li a {
+    color: dimgray;
+}
+.noticemb ul li a:hover {
+    color: red;
+}
+.button {
+    margin-left: 13px;
+    margin-top: 21px;
+}
+
+.btn-info {
+    width: 83.5px;
+    height: 36px;
+    box-shadow: 3px 3px 5px 1px #888888;
+    background-color: #00A0E9;
+    border-color: #00A0E9;
+    font-family: 'Microsoft YaHei';
+    border-radius: 10px;
+}
+
+.login .form-group label {
+    text-align: center;
+}
+
+.login .checkbox {
+    width: 90%;
+}
+
+.checkbox a {
+    line-height: 33px;
+}
+
+.login {
+    padding-top: 10px;
+    width: 100%;
+    height: 356px;
+    background: #fff;
+    box-shadow: 3px 3px 5px #888888;
+    border-radius: 10px;
+}
+
+.login .login_letter {
+    margin: 0 20px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 18px;
+    background: url(../images/index/bot_pic.png) no-repeat;
+    background-position-y: 28px;
+    color: #0755D0;
+    font-weight: bold;
+}
+
+.login .form-horizontal {
+    margin: 0 30px 0 30px;
+}
+
+.login-btn {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 20px;
+}
+
+.form-group {
+    margin: 30px 30px 15px 30px;
+}
+
+.form-group button {
+    box-shadow: 3px 3px 5px 1px #888888;
+}

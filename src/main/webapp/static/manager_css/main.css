@@ -1,0 +1,698 @@
+.header {
+    padding: 0 15px;
+    height: 50px;
+    background-color: rgba(192, 224, 224, 0.6);
+}
+
+.header img {
+    width: 25px;
+    height: 25px;
+}
+
+.header a {
+    color: #000;
+    font-size: 14px;
+}
+
+.header a:hover {
+    color: red;
+}
+
+.header .head_left,
+.header .head_right {
+    margin-top: 11.5px;
+}
+
+.header .head_left {
+    float: left;
+}
+
+.header .head_right {
+    float: right;
+}
+
+.header ul {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.header ul li {
+    position: absolute;
+    padding: 5px;
+    width: 50px;
+    text-align: center;
+    background-color: rgba(192, 224, 224, 0.6);
+    cursor: pointer;
+}
+
+.navBar {
+    height: 70px;
+    border-bottom: 1px solid #ccc;
+}
+
+.navBar .list {
+    /* padding: 0 100px; */
+    margin: 0 auto;
+    width: 1120px;
+}
+
+.navBar .list a {
+    display: inline-block;
+    width: 100%;
+    line-height: 66px;
+    font-size: 25px;
+}
+
+.navBar .list a::before {
+    font-size: 40px;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+.navBar .list li.active {
+    border-bottom: 4px solid #ff6633;
+}
+
+.navBar .list li.active a {
+    color: #ff6633;
+}
+
+.navBar .list li {
+    display: inline-block;
+    width: 260px;
+    text-align: center;
+    line-height: 66px;
+    cursor: pointer;
+}
+
+/* .navBar .list li:nth-child(1) {
+    margin-right: 85px;
+} */
+
+/* .navBar .list li:nth-child(2) {
+    margin-left: 85px;
+} */
+
+.main {
+    padding: 30px 0;
+    background: url(../images/bg.png) center center fixed;
+    background-size: cover;
+}
+
+.main .main_info {
+    padding: 15px 15px 0 15px;
+    width: 75%;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    background-color: rgb(223, 241, 255);
+}
+
+.containe{
+    width: 100%;
+    height: 100%;
+    padding: 3%;
+    
+    display: flex;
+}
+.containe>.container-left{
+    flex: 1;
+    padding-right: 15px;
+}
+.containe>.container-right{
+    flex: 3;
+}
+
+.main .title{
+    width: 75%;
+    /* height: 4rem; */
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin-left: 30px;
+    display: flex;
+    align-items: center;
+    
+}
+.main .title>.icon{
+    background-color: #1f94f8;
+    display: inline-block;
+    width: 10px;
+    height: 26px;
+}
+.main .title>.title-text{
+    padding-left: 4px;
+    font-size: 1.14rem;
+}
+.containe>.container-left>.type{
+    width: 100%;
+    height: 4rem;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid  #acb9db;
+    cursor: pointer;
+    font-size: 1.14rem;
+}
+.containe>.container-left>.active{
+    background-color:#ffffff; 
+    width: 100%;
+    height: 4rem;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid  #acb9db;
+    cursor: pointer;
+    font-size: 1.14rem;
+}
+
+/*评审项目*/
+.containe>.eva{
+    flex: 3;
+    border-left: 1px solid  #acb9db;
+    padding-left: 15px;
+    height: 100%;
+}
+.containe>.eva>.rightcon{
+    width: 100%;
+    background-color: #ffffff;
+    height: 500px;
+}
+.containe>.eva>.rightcon .rightcon-header{
+    width: 100%;
+    display: flex;
+}
+
+.containe>.eva>.rightcon .rightcon-header>.titleb{
+    flex: 3;
+    /* width: 100%; */
+    /* height: 4rem; */
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    
+}
+.containe>.eva>.rightcon .rightcon-header>.titleb>.iconb{
+    background-color: #ee910b;
+    display: inline-block;
+    width: 10px;
+    height: 26px;
+}
+.containe>.eva>.rightcon .rightcon-header>.titleb>.title-textb{
+    padding-left: 4px;
+    font-size: 1.14rem;
+}
+.containe>.eva>.rightcon .rightcon-header>input{
+    flex: 1;
+    margin-left: 10%;
+    outline: none;
+}
+.containe>.eva>.container-right-footer{
+    width: 100%;
+    text-align: center;
+    margin-top: 2rem;
+}
+.containe>.eva>.container-right-footer>input{
+    outline: none;
+}
+
+/*评审规则*/
+.containe>.rules{
+    flex: 3;
+    border-left: 1px solid  #acb9db;
+    padding-left: 15px;
+    height: 100%;
+}
+.containe>.rules>.rightcon{
+    width: 100%;
+    background-color: #ffffff;
+    height: 500px;
+}
+.containe>.rules>.rightcon .rightcon-header{
+    width: 100%;
+
+    
+}
+.containe>.rules>.rightcon .rightcon-header>.glyphicon{
+    float: right;
+}
+
+
+
+
+/*开始打分*/
+.containe>.marks{
+    flex: 3;
+    border-left: 1px solid  #acb9db;
+    padding-left: 15px;
+    height: 100%;
+}
+.containe>.marks>.rightcon{
+    width: 100%;
+    background-color: #ffffff;
+    /* height: 500px; */
+}
+.containe>.marks>.rightcon .rightcon-header{
+    width: 100%;
+    display: flex;
+}
+
+.containe>.marks>.rightcon .rightcon-header>.titleb{
+    flex: 3;
+    /* width: 100%; */
+    /* height: 4rem; */
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    
+}
+.containe>.marks>.rightcon .rightcon-header>.titleb>.iconb{
+    background-color: #ee910b;
+    display: inline-block;
+    width: 10px;
+    height: 26px;
+}
+.containe>.marks>.rightcon .rightcon-header>.titleb>.title-textb{
+    padding-left: 4px;
+    font-size: 1.14rem;
+}
+.containe>.marks>.rightcon .rightcon-header>input{
+    flex: 1;
+    margin-left: 10%;
+    outline: none;
+}
+.containe>.marks>.rightcon .rightcon-con{
+    padding: 2rem;
+    width: 100%;
+    height: 10rem;
+    display: flex;
+}
+.containe>.marks>.rightcon .rightcon-con .text{
+    flex: 1;
+    height: 10rem;
+    border-left: 1px solid #000000;
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    text-align: center;
+    line-height: 10rem;
+}
+.containe>.marks>.rightcon .rightcon-con .opinion{
+    flex: 3;
+    height: 10rem;
+}
+.containe>.marks>.rightcon .rightcon-con .opinion textarea{
+    width: 100%;
+    border: 1px solid #000000; 
+    height: 10rem;
+}
+.containe>.marks>.rightcon .rightcon-btn{
+    padding: 2rem;
+    padding-top: 3rem;
+    display: flex;
+    width: 100%;
+}
+.containe>.marks>.rightcon .rightcon-btn input{
+    background-color: #ee910b;
+    border: none;
+}
+.containe>.marks>.rightcon .other,.table{
+    padding: 2rem;
+    width: 100%;
+    padding-top: 0;
+    /* height: 10rem; */
+}
+.containe>.marks>.rightcon .other>textarea{
+    width: 100%;
+    overflow: scroll;
+    height: 9rem;
+}
+.containe>.marks>.rightcon .table>table{
+    width: 100%;
+    text-align: center;
+}
+.containe>.marks>.rightcon .table>table input{
+    width: 100%;
+}
+.containe>.marks>.container-right-footer{
+    width: 100%;
+    text-align: center;
+    margin-top: 2rem;
+}
+.containe>.marks>.container-right-footer>input{
+    outline: none;
+    width: 9rem;
+}
+table tr td:nth-last-child(1){
+    width: 26%;
+}
+
+/* 中后期管理 */
+.mlmanagement-header {
+    display: flex;
+    flex: 4;
+    line-height: 5px;
+}
+
+.mlmanagement-header button {
+    background: rgb(58, 149, 245);
+    border: 0;
+    padding: 20px 35px;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    margin: 0 auto;
+}
+
+.container-right-center-one {
+    border: 1px solid rgb(176, 188, 221);
+    padding: 10px 0px 10px 20px;
+    margin-top: 25px;
+    background-color: white;
+}
+
+.container-right-left-upload {
+    background-color: white;
+    display: inline-block;
+    width: 35%;
+    height: 250px;
+    margin: 0 auto;
+    border: 2px dashed rgb(153, 153, 153);
+    border-radius: 5px;
+}
+
+.container-right-left-upload-btn {
+    font-style: italic;
+    background: rgb(51, 153, 204);
+    border-radius: 5px;
+    color: white;
+    padding: 5% 20%;
+    font-size: 16px;
+    border: 0;
+}
+
+.container-right-left-upload-img {
+    line-height: 180px;
+    padding-left: 97px;
+    padding-top: 10px;
+}
+
+.container-right-right {
+    background-color: rgb(236, 236, 236);
+    display: inline-block;
+    width: 60%;
+    height: 250px;
+    border: 2px dashed rgb(153, 153, 153);
+    border-radius: 5px;
+    vertical-align: top;
+    text-align: center;
+    font-style: italic;
+    font-size: 20px;
+    color: rgb(171, 171, 171);
+    margin-left: 15px;
+}
+
+.submit-audit-div {
+    text-align: right;
+    margin-top: 10px;
+}
+
+.submit-audit {
+    background-color: rgb(51, 153, 204);
+    color: white;
+    border: 0;
+    padding: 8px 25px;
+    border-radius: 1px;
+    font-size: 16px;
+}
+
+.submit-audit-result {
+    background-color: white;
+    margin-top: 60px;
+}
+
+.submit-audit-result-content {
+    border-style: solid none none none;
+    border-top-width: 1px;
+    border-color: rgb(183, 198, 227);
+    line-height: 35px;
+    font-size: 16px;
+    padding-left: 36px;
+}
+
+.project-title {
+    color: rgb(75, 118, 209);
+}
+
+span[class|="project-result"] {
+    margin-left: 60%;
+}
+
+.project-result-ture {
+    color: rgb(75, 118, 209);
+}
+
+.project-result-false {
+    color: red;
+}
+
+.fileinput-button {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.fileinput-button input {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    opacity: 0;
+    -ms-filter: 'alpha(opacity=0)';
+    font-size: 40px;
+}
+
+.fileinput-button-text {
+    background: rgb(51, 153, 204);
+    border: 1px solid;
+    font-size: 12px;
+    color: white;
+    font-style: italic;
+    padding: 6% 69px;
+    border-radius: 5px;
+    margin-left: 9px;
+}
+
+.container-right-center-two {
+    position: relative;
+    height: 750px;
+    border: 1px solid dimgray;
+    padding: 10px 10px 10px 10px;
+    background-color: white;
+}
+
+.PoT-content {
+    padding: 0 10px;
+    line-height: 40px;
+    border-bottom: 1px solid rgb(237, 237, 237);
+    font-size: 18px;
+}
+
+.PoT-content-icon {
+    margin-left: 76%;
+}
+
+.PoT-button {
+    position: absolute;
+    left: 5px;
+    bottom: 5px;
+}
+
+.PoT-button-intro {
+    background: rgb(255, 153, 1);
+    font-size: 14px;
+    padding: 10px 30px;
+    border: 0;
+    border-radius: 5px;
+    color: white;
+}
+
+.container-right-center-three {
+    border: 0;
+    padding: 20px 20px 20px 20px;
+    margin-top: 25px;
+    background-color: white;
+}
+
+.DS {
+    border: 1px solid rgb(153, 153, 153);
+    text-align: center;
+    line-height: 675px;
+}
+
+.DS p {
+    font-size: 70px;
+    color: rgb(153, 153, 153);
+    margin: 0;
+}
+
+.DS-buttton {
+    margin-top: 40px;
+    display: flex;
+    flex: 3;
+}
+
+.DS-buttton button {
+    margin: 0 auto;
+}
+
+.DS-button-intro {
+    background: rgb(255, 153, 1);
+    font-size: 16px;
+    padding: 10px 35px;
+    border: 0;
+    border-radius: 5px;
+    color: white;
+}
+
+.DS-button-export {
+    background: rgb(50, 153, 205);
+    font-size: 16px;
+    padding: 10px 55px;
+    border: 0;
+    border-radius: 5px;
+    color: white;
+}
+
+.DS-button-start {
+    background: rgb(50, 153, 205);
+    font-size: 16px;
+    padding: 10px 40px;
+    border: 0;
+    border-radius: 5px;
+    color: white;
+}
+
+.comment {
+    padding-bottom: 268px;
+}
+
+.PoTnext {
+    color: rgb(152, 154, 155);
+    border: 1px solid rgb(153, 153, 153);
+}
+
+.PoTnext-p1 {
+    font-size: 14px;
+    text-indent: 10px;
+    color: rgb(152, 154, 155);
+}
+
+.PoTnext-p2 {
+    font-size: 70px;
+    color: rgb(152, 154, 155);
+    margin: 0;
+    text-align: center;
+    line-height: 400px;
+    border-bottom: 1px solid rgb(237, 237, 237);
+}
+
+.PoT-comment {
+    margin-top: 40px;
+}
+
+.footer {
+    width: 100%;
+}
+
+.footer .copyRight {
+    margin-top: 30px;
+    text-align: center;
+    line-height: 2.5em;
+    font-size: 11px;
+}
+
+
+
+/* 那个2018-12-3  专家小组的省级联动的样式 */
+.main {
+    margin-top: 30px;
+    background-color: #f5f5f5;
+    border-radius: 3px;
+}
+
+.main form.details .area .form-control {
+    width: 15%;
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.main form.details .form-group {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.main form.details .form-group .number {
+    width: 24%;
+}
+
+.main form.details .education div {
+    padding-left: 18%;
+}
+
+.main form.details .form_footer {
+    border-top: 1px solid #eee;
+    text-align: center;
+}
+
+.main form.details .form_footer button {
+    margin-top: 30px;
+}
+.area select{
+    background-color:white;
+}
+.education div label{
+    color: rgb(175, 175, 175)
+}
+.container-left{
+    width: 30%;
+}
+.container-right{
+    width: 100%;
+}
+label{
+    width: auto;
+}
+.screen label{
+    font-size: 16px;
+    font-weight: bold;
+    width: auto;
+    padding-left: 5px;
+    /* vertical-align: middle; */
+}
+.screen span{
+    width: 10px;
+    height: 10px;
+    /* margin-left: 45px; */
+    
+    border-radius: 50%;
+    background-color: blue;
+    float: left;
+    /* vertical-align: middle;   */
+    margin-top: 6px;
+}
+.screen{
+    padding-bottom: 25px;
+    border-bottom: 2px solid rgb(199, 202, 232);
+}
+
+#nones{
+    display: none;
+}
+#blocks{
+
+    display: block
+}

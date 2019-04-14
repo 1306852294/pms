@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.peace.pms.dao.sys.Pro_Exper_Com_xzhMapper" >
+  <resultMap id="BaseResultMap" type="com.peace.pms.entity.sys.Pro_Exper_Com_xzh" >
+    <id column="Pid" property="pid" jdbcType="INTEGER" />
+    <id column="Cid" property="cid" jdbcType="INTEGER" />
+    <id column="Eid" property="eid" jdbcType="INTEGER" />
+    <result column="Score" property="score" jdbcType="DOUBLE" />
+  </resultMap>
+  <resultMap id="ResultMapWithBLOBs" type="com.peace.pms.entity.sys.Pro_Exper_Com_xzh" extends="BaseResultMap" >
+    <result column="Suggestion" property="suggestion" jdbcType="LONGVARCHAR" />
+  </resultMap>
+
+  <select id="find" resultMap="BaseResultMap" parameterType="com.peace.pms.entity.sys.Query">
+     	select *
+     	from pro_exper_com
+     	where Eid=#{eid,jdbcType=INTEGER}
+     	AND Score is null
+        <if test="pid !=null">
+         AND Pid=#{pid}
+        </if>
+        limit #{start},#{rows};
+   </select>
+
+  <select id="getPid" resultType="Integer" parameterType="com.peace.pms.entity.sys.Query">
+       select distinct Pid
+       from pro_exper_com
+       where Eid=#{eid,jdbcType=INTEGER};
+  </select>
+
+
+  <select id="getCountByQuery" parameterType="com.peace.pms.entity.sys.Query" resultType="int">
+    select count(1)   <!-- 扫描第一个字段 统计符合的记录数 -->
+    from pro_exper_com t1
+  </select>
+
+  <sql id="Base_Column_List" >
+    Pid, Cid, Eid, Score
+  </sql>
+  <sql id="Blob_Column_List" >
+    Suggestion
+  </sql>
+
+  <select id="selectByPid" resultMap="ResultMapWithBLOBs" parameterType="int">
+    select
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from pro_exper_com
+    where  Pid= #{Pid}
+      and  Cid= #{Cid}
+  </select>
+
+
+  <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="com.peace.pms.entity.sys.Pro_Exper_ComKey" >
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from pro_exper_com
+    where Pid = #{pid,jdbcType=INTEGER}
+      and Cid = #{cid,jdbcType=INTEGER}
+      and Eid = #{eid,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="com.peace.pms.entity.sys.Pro_Exper_ComKey" >
+    delete from pro_exper_com
+    where Pid = #{pid,jdbcType=INTEGER}
+      and Cid = #{cid,jdbcType=INTEGER}
+      and Eid = #{eid,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.peace.pms.entity.sys.Pro_Exper_Com_xzh" >
+    insert into pro_exper_com (Pid, Cid, Eid,
+      Score, Suggestion)
+    values (#{pid,jdbcType=INTEGER}, #{cid,jdbcType=INTEGER}, #{eid,jdbcType=INTEGER}, 
+      #{score,jdbcType=DOUBLE}, #{suggestion,jdbcType=LONGVARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.peace.pms.entity.sys.Pro_Exper_Com_xzh" >
+    insert into pro_exper_com
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="pid != null" >
+        Pid,
+      </if>
+      <if test="cid != null" >
+        Cid,
+      </if>
+      <if test="eid != null" >
+        Eid,
+      </if>
+      <if test="score != null" >
+        Score,
+      </if>
+      <if test="suggestion != null" >
+        Suggestion,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="pid != null" >
+        #{pid,jdbcType=INTEGER},
+      </if>
+      <if test="cid != null" >
+        #{cid,jdbcType=INTEGER},
+      </if>
+      <if test="eid != null" >
+        #{eid,jdbcType=INTEGER},
+      </if>
+      <if test="score != null" >
+        #{score,jdbcType=DOUBLE},
+      </if>
+      <if test="suggestion != null" >
+        #{suggestion,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.peace.pms.entity.sys.Pro_Exper_Com_xzh" >
+    update pro_exper_com
+    <set >
+      <if test="score != null" >
+        Score = #{score,jdbcType=DOUBLE},
+      </if>
+      <if test="suggestion != null" >
+        Suggestion = #{suggestion,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where Pid = #{pid,jdbcType=INTEGER}
+      and Cid = #{cid,jdbcType=INTEGER}
+      and Eid = #{eid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.peace.pms.entity.sys.Pro_Exper_Com_xzh" >
+    update pro_exper_com
+    set Score = #{score,jdbcType=DOUBLE},
+      Suggestion = #{suggestion,jdbcType=LONGVARCHAR}
+    where Pid = #{pid,jdbcType=INTEGER}
+      and Cid = #{cid,jdbcType=INTEGER}
+      and Eid = #{eid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.peace.pms.entity.sys.Pro_Exper_Com_xzh" >
+    update pro_exper_com
+    set Score = #{score,jdbcType=DOUBLE}
+    where Pid = #{pid,jdbcType=INTEGER}
+      and Cid = #{cid,jdbcType=INTEGER}
+      and Eid = #{eid,jdbcType=INTEGER}
+  </update>
+</mapper>
