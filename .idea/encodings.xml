@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/peace/pms/controller/sys/indexController.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/peace/pms/dao/sys/CompanyMapper.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/peace/pms/dao/sys/ExpertMapper.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/peace/pms/dao/sys/ManagerMapper.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/peace/pms/dao/sys/ProjectMapper.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/peace/pms/entity/sys/Company.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/peace/pms/entity/sys/Expert.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/peace/pms/entity/sys/Manager.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/peace/pms/entity/sys/Project.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/mappings/sys/CompanyMapper.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/mappings/sys/ExpertMapper.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/mappings/sys/ManagerMapper.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/mappings/sys/ProjectMapper.xml" charset="GBK" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>
